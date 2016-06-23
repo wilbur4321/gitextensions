@@ -260,6 +260,7 @@ namespace GitUI
 
             //Size = new Size(rectNew.Right - rectNew.Left, rectNew.Bottom - rectNew.Top);
 
+#if false
             // Adjust Font size of Controls.
             Font = new Font(Font.FontFamily,
                             Font.Size * factor,
@@ -269,10 +270,13 @@ namespace GitUI
             // (Each Font is individually specified at design time)
             foreach (Control c in GetChildInControl(this))
             {
+                Debug.WriteLine("c " + c.GetType().ToString() + ", FontSize: " + c.Font.Size);
                 c.Font = new Font(c.Font.FontFamily,
                                   c.Font.Size * factor,
                                   c.Font.Style);
             }
+#endif
+
             PerformLayout();
         }
 
@@ -292,7 +296,7 @@ namespace GitUI
             return controlList;
         }
 
-        #region OS Version
+#region OS Version
 
         // Check if OS is Windows 8.1 or newer.
         private bool IsWindows81OrNewer()
@@ -303,7 +307,7 @@ namespace GitUI
             return Environment.OSVersion.Version >= win81;
         }
 
-        #endregion
+#endregion
 
         /// <summary>Invoked at runtime during the <see cref="OnLoad"/> method.</summary>
         protected virtual void OnRuntimeLoad(EventArgs e)
