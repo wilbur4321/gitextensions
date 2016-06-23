@@ -96,7 +96,7 @@ namespace GitUI.CommandsDialogs.BrowseDialog
             // FormCommitCount
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(367, 317);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);

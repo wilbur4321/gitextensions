@@ -53,7 +53,7 @@
             // FormChooseTranslation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(431, 168);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);

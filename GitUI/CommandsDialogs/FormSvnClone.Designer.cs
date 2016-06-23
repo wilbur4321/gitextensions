@@ -299,7 +299,7 @@
             // 
             this.AcceptButton = this.okButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(657, 323);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this._NO_TRANSLATE_authorsFileTextBox);

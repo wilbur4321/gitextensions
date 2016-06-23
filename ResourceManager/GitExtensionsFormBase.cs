@@ -86,7 +86,7 @@ namespace ResourceManager
         protected override void OnLoad(EventArgs e)
         {
             AutoScaleMode = AppSettings.EnableAutoScale
-                ? AutoScaleMode.Dpi
+                ? AutoScaleMode.Font
                 : AutoScaleMode.None;
             base.OnLoad(e);
         }

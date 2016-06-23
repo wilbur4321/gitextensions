@@ -135,7 +135,7 @@
             //
             this.AcceptButton = this.Download;
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(534, 178);
             this.Controls.Add(this.labelEnterChangeIdOrNumber);
             this.Controls.Add(this.labelRemote);

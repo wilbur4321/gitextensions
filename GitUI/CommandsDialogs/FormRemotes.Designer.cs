@@ -762,7 +762,7 @@ namespace GitUI.CommandsDialogs
             // FormRemotes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(654, 297);
             this.Controls.Add(this.tabControl1);
             this.MaximizeBox = false;

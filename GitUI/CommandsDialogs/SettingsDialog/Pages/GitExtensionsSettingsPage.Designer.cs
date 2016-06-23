@@ -521,7 +521,7 @@
 			// GitExtensionsSettingsPage
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
-			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.AutoScroll = true;
 			this.Controls.Add(this.groupBoxEmailSettings);
 			this.Controls.Add(this.panelSpacer2);

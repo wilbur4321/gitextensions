@@ -71,7 +71,7 @@
             // CreateLocalBranchesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(518, 79);
             this.Controls.Add(this._NO_TRANSLATE_Remote);
             this.Controls.Add(this.label1);

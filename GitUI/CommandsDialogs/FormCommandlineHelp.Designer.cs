@@ -72,7 +72,7 @@
             // FormCommandlineHelp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(394, 662);
             this.Controls.Add(this.flowLayoutPanel1);
             this.MaximizeBox = false;

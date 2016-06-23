@@ -78,7 +78,7 @@ namespace GitUI.CommandsDialogs.AboutBoxDialog
             Controls.Add(tabControl);
 
             this.AutoScaleDimensions = new SizeF(96F, 96F);
-            this.AutoScaleMode = AutoScaleMode.Dpi;
+            this.AutoScaleMode = AutoScaleMode.Font;
             this.ClientSize = new Size(624, 442);
             this.FormBorderStyle = FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;

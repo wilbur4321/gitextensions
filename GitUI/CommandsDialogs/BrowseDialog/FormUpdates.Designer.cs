@@ -100,7 +100,7 @@
             // FormUpdates
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(565, 125);
             this.Controls.Add(this.btnDownloadNow);
             this.Controls.Add(this.progressBar1);

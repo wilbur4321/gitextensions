@@ -135,7 +135,7 @@
             // FormGitReview
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(634, 519);
             this.Controls.Add(this.splitContainer1);
             this.Name = "FormGitReview";
