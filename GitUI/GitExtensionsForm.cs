@@ -238,8 +238,12 @@ namespace GitUI
                 return;
 
             // Hold initial DPI used at loading this window.
+            float _dpiOldImage = _dpiOld;
             if (_dpiOld == 0)
+            {
                 _dpiOld = (int)AutoScaleDimensions.Width;
+                _dpiOldImage = 96;
+            }
 
             if (_dpiOld == dpiNew)
                 return;
@@ -251,6 +255,7 @@ namespace GitUI
             // Adjust location, size and font size of Controls.
             //--------------------------------------------------
             float factor = (float)dpiNew / _dpiOld;
+            float factorImage = (float)dpiNew / _dpiOldImage;
 
             _dpiOld = dpiNew;
 
@@ -258,24 +263,29 @@ namespace GitUI
             SuspendLayout();
             Scale(new SizeF(factor, factor));
 
-            //Size = new Size(rectNew.Right - rectNew.Left, rectNew.Bottom - rectNew.Top);
+            Size = new Size(rectNew.Right - rectNew.Left, rectNew.Bottom - rectNew.Top);
 
-#if false
-            // Adjust Font size of Controls.
-            Font = new Font(Font.FontFamily,
-                            Font.Size * factor,
-                            Font.Style);
-
-            // Adjust Font size of Buttons.
-            // (Each Font is individually specified at design time)
+            // Adjust items within various controls
             foreach (Control c in GetChildInControl(this))
             {
                 Debug.WriteLine("c " + c.GetType().ToString() + ", FontSize: " + c.Font.Size);
-                c.Font = new Font(c.Font.FontFamily,
-                                  c.Font.Size * factor,
-                                  c.Font.Style);
+
+                // ToolStrip.ImageScalingSize doesn't automatically adjust ImageScalingSize properly.
+                if (c is ToolStripEx)
+                {
+                    ToolStripEx tse = c as ToolStripEx;
+                    tse.ImageScalingSize = new Size((int)(tse.ImageScalingSize.Width * factorImage), (int)(tse.ImageScalingSize.Height * factorImage));
+                }
+
+                // SplitContainer doesn't automatically adjust Panel1MinSize, Panel2MinSize and SplitterDistance properly.
+                else if (c is SplitContainer)
+                {
+                    SplitContainer s = c as SplitContainer;
+                    s.Panel1MinSize = (int)(s.Panel1MinSize * factor);
+                    s.Panel2MinSize = (int)(s.Panel2MinSize * factor);
+                    s.SplitterDistance = (int)(s.SplitterDistance * factor);
+                }
             }
-#endif
 
             PerformLayout();
         }
