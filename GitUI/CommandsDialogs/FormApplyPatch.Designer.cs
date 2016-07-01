@@ -332,7 +332,7 @@
             // 
             this.AcceptButton = this.Apply;
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(711, 436);
             this.Controls.Add(this.tableLayoutPanel1);
             this.MinimumSize = new System.Drawing.Size(720, 410);

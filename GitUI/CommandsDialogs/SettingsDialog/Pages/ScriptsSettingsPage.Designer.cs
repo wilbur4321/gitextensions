@@ -474,7 +474,7 @@
             // ScriptsSettingsPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "ScriptsSettingsPage";
             this.Size = new System.Drawing.Size(988, 455);

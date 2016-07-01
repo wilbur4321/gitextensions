@@ -1988,7 +1988,7 @@ namespace GitUI.CommandsDialogs
             // FormBrowse
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
             this.ClientSize = new System.Drawing.Size(1154, 716);
             this.Controls.Add(this.toolPanel);

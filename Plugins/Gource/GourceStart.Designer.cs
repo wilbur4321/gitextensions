@@ -207,7 +207,7 @@
             // GourceStart
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(718, 165);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.tableLayoutPanel1);

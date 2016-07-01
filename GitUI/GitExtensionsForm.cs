@@ -234,7 +234,7 @@ namespace GitUI
         // Adjust location, size and font size of Controls according to new DPI.
         private void AdjustDpi(int dpiNew, NativeMethods.RECT rectNew)
         {
-            if (AutoScaleMode != AutoScaleMode.Font)
+            if (AutoScaleMode != AutoScaleMode.Dpi)
                 return;
 
             // Hold initial DPI used at loading this window.

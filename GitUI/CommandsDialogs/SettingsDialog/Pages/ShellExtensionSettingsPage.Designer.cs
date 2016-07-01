@@ -104,7 +104,7 @@
             // ShellExtensionSettingsPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.Controls.Add(this.cbAlwaysShowAllCommands);
             this.Controls.Add(this.labelPreview);
             this.Controls.Add(this.label1);

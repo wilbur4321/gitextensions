@@ -449,7 +449,7 @@
             // FormSubmodules
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(782, 372);
             this.Controls.Add(this.splitContainer1);
             this.Margin = new System.Windows.Forms.Padding(4);

@@ -44,7 +44,7 @@
             // FormChangeLog
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(849, 411);
             this.Controls.Add(this.ChangeLog);
             this.Name = "FormChangeLog";

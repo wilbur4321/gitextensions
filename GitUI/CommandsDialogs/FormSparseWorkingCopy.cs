@@ -86,7 +86,7 @@ namespace GitUI.CommandsDialogs
         private void CreateView([NotNull] FormSparseWorkingCopyViewModel sparse)
         {
             Text = Globalized.Strings.SparseWorkingCopy.Text;
-            AutoScaleMode = AutoScaleMode.Font;
+            AutoScaleMode = AutoScaleMode.Dpi;
             StartPosition = FormStartPosition.CenterParent;
             MinimumSize = new Size(800, 600);
 

@@ -203,7 +203,7 @@ namespace GitUI.CommandsDialogs
             // FormViewPatch
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(689, 501);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "FormViewPatch";

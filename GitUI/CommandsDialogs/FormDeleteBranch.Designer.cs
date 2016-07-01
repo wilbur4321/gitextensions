@@ -122,7 +122,7 @@
             // 
             this.AcceptButton = this.Delete;
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(579, 236);
             this.Controls.Add(this.gotoUserManualControl1);
             this.Controls.Add(this.Branches);

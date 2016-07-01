@@ -345,7 +345,7 @@
             // FormArchive
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(594, 571);
             this.Controls.Add(this.tableLayoutPanel4);
             this.MinimumSize = new System.Drawing.Size(610, 609);
