@@ -274,7 +274,7 @@ namespace GitUI
                 if (c is ToolStripEx)
                 {
                     ToolStripEx tse = c as ToolStripEx;
-                    tse.ImageScalingSize = new Size((int)(tse.ImageScalingSize.Width * factorImage), (int)(tse.ImageScalingSize.Height * factorImage));
+                    tse.ImageScalingSize = new Size((int)Math.Round(tse.ImageScalingSize.Width * factorImage), (int)Math.Round(tse.ImageScalingSize.Height * factorImage));
                 }
 
                 // SplitContainer doesn't automatically adjust Panel1MinSize, Panel2MinSize and SplitterDistance properly.

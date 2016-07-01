@@ -269,7 +269,6 @@ namespace GitUI.CommandsDialogs
             // 
             this.toolPanel.Panel1.Controls.Add(this.UserMenuToolStrip);
             this.toolPanel.Panel1.Controls.Add(this.ToolStrip);
-            this.toolPanel.Panel1MinSize = 50;
             // 
             // toolPanel.Panel2
             // 
