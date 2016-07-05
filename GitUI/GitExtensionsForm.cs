@@ -248,9 +248,6 @@ namespace GitUI
             if (_dpiOld == dpiNew)
                 return;
 
-            // Move this window.
-            Location = new Point(rectNew.Left, rectNew.Top);
-
             //--------------------------------------------------
             // Adjust location, size and font size of Controls.
             //--------------------------------------------------
@@ -262,8 +259,6 @@ namespace GitUI
             // Adjust location and size of Controls (except location of this window itself).
             SuspendLayout();
             Scale(new SizeF(factor, factor));
-
-            Size = new Size(rectNew.Right - rectNew.Left, rectNew.Bottom - rectNew.Top);
 
             // Adjust items within various controls
             foreach (Control c in GetChildInControl(this))
