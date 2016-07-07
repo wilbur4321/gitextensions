@@ -260,6 +260,13 @@ namespace GitUI
             SuspendLayout();
             Scale(new SizeF(factor, factor));
 
+            AdjustDpi(factor, factorImage);
+
+            PerformLayout();
+        }
+
+        protected virtual void AdjustDpi(float factor, float factorImage)
+        {
             // Adjust items within various controls
             foreach (Control c in this.GetAllChildren<Control>())
             {
@@ -281,8 +288,6 @@ namespace GitUI
                     s.SplitterDistance = (int)(s.SplitterDistance * factor);
                 }
             }
-
-            PerformLayout();
         }
 
 #region OS Version
