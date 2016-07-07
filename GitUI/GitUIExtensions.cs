@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
+using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Windows.Forms;
@@ -361,6 +362,14 @@ namespace GitUI
                 return control;
             else
                 return container.FindFocusedControl();
+        }
+
+        public static IEnumerable<TControl> GetAllChildren<TControl>(this Control control)
+        {
+            var controls = control.Controls.Cast<Control>();
+            return controls.SelectMany(ctrl => GetAllChildren<Control>(ctrl))
+                .Concat(controls)
+                .OfType<TControl>();
         }
 
     }

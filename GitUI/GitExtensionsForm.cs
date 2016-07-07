@@ -261,7 +261,7 @@ namespace GitUI
             Scale(new SizeF(factor, factor));
 
             // Adjust items within various controls
-            foreach (Control c in GetChildInControl(this))
+            foreach (Control c in this.GetAllChildren<Control>())
             {
                 Debug.WriteLine("c " + c.GetType().ToString() + ", FontSize: " + c.Font.Size);
 
@@ -283,22 +283,6 @@ namespace GitUI
             }
 
             PerformLayout();
-        }
-
-        // Get child Controls in a specified Control.
-        private IEnumerable<Control> GetChildInControl(Control parent)
-        {
-            var controlList = new List<Control>();
-
-            foreach (Control child in parent.Controls)
-            {
-                if (child.Font != parent.Font)
-                    controlList.Add(child);
-                if (child.Controls.Count != 0)
-                    controlList.AddRange(GetChildInControl(child));
-            }
-
-            return controlList;
         }
 
 #region OS Version
