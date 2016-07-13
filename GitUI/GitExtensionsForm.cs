@@ -238,11 +238,9 @@ namespace GitUI
                 return;
 
             // Hold initial DPI used at loading this window.
-            float _dpiOldImage = _dpiOld;
             if (_dpiOld == 0)
             {
                 _dpiOld = (int)AutoScaleDimensions.Width;
-                _dpiOldImage = 96;
             }
 
             if (_dpiOld == dpiNew)
@@ -252,7 +250,7 @@ namespace GitUI
             // Adjust location, size and font size of Controls.
             //--------------------------------------------------
             float factor = (float)dpiNew / _dpiOld;
-            float factorImage = (float)dpiNew / _dpiOldImage;
+            this.AutoScaleDimensions = new SizeF(dpiNew, dpiNew);
 
             _dpiOld = dpiNew;
 
@@ -260,23 +258,21 @@ namespace GitUI
             SuspendLayout();
             Scale(new SizeF(factor, factor));
 
-            AdjustDpi(factor, factorImage);
+            AdjustDpi(factor);
 
             PerformLayout();
         }
 
-        protected virtual void AdjustDpi(float factor, float factorImage)
+        protected virtual void AdjustDpi(float factor)
         {
             // Adjust items within various controls
             foreach (Control c in this.GetAllChildren<Control>())
             {
-                Debug.WriteLine("c " + c.GetType().ToString() + ", FontSize: " + c.Font.Size);
-
                 // ToolStrip.ImageScalingSize doesn't automatically adjust ImageScalingSize properly.
                 if (c is ToolStripEx)
                 {
                     ToolStripEx tse = c as ToolStripEx;
-                    tse.ImageScalingSize = new Size((int)Math.Round(tse.ImageScalingSize.Width * factorImage), (int)Math.Round(tse.ImageScalingSize.Height * factorImage));
+                    tse.ImageScalingSize = new Size((int)Math.Round(tse.ImageScalingSize.Width * factor), (int)Math.Round(tse.ImageScalingSize.Height * factor));
                 }
 
                 // SplitContainer doesn't automatically adjust Panel1MinSize, Panel2MinSize and SplitterDistance properly.

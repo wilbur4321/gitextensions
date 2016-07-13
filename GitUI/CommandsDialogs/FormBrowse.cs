@@ -3558,6 +3558,14 @@ namespace GitUI.CommandsDialogs
             base.Dispose(disposing);
         }
 
+        protected override void OnSizeChanged(EventArgs e)
+        {
+            this.toolPanel.Width = (int)Math.Round(this.ClientSize.Width / this.AutoScaleFactor.Width);
+            this.toolPanel.Height = (int)Math.Round(this.ClientSize.Height / this.AutoScaleFactor.Height);
+
+            base.OnSizeChanged(e);
+        }
+
         private void menuitemSparseWorkingCopy_Click(object sender, EventArgs e)
         {
             UICommands.StartSparseWorkingCopyDialog(this);
