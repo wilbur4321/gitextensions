@@ -268,15 +268,8 @@ namespace GitUI
             // Adjust items within various controls
             foreach (Control c in this.GetAllChildren<Control>())
             {
-                // ToolStrip.ImageScalingSize doesn't automatically adjust ImageScalingSize properly.
-                if (c is ToolStripEx)
-                {
-                    ToolStripEx tse = c as ToolStripEx;
-                    tse.ImageScalingSize = new Size((int)Math.Round(tse.ImageScalingSize.Width * factor), (int)Math.Round(tse.ImageScalingSize.Height * factor));
-                }
-
                 // SplitContainer doesn't automatically adjust Panel1MinSize, Panel2MinSize and SplitterDistance properly.
-                else if (c is SplitContainer)
+                if (c is SplitContainer)
                 {
                     SplitContainer s = c as SplitContainer;
                     s.Panel1MinSize = (int)(s.Panel1MinSize * factor);
